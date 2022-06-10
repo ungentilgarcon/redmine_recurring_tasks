@@ -1,4 +1,4 @@
-require 'redmine_recurring_tasks'
+require_dependency File.dirname(__FILE__) + '/lib/redmine_recurring_tasks'
 
 reloader = defined?(ActiveSupport::Reloader) ? ActiveSupport::Reloader : ActionDispatch::Reloader
 reloader.to_prepare do
@@ -14,7 +14,7 @@ Redmine::Plugin.register :redmine_recurring_tasks do
   name 'Redmine Recurring Tasks'
   author 'Southbridge'
   description 'Plugin for creating scheduled tasks from template'
-  version '0.3.4'
+  version '0.3.6'
   url 'https://github.com/southbridgeio/redmine_recurring_tasks'
   author_url 'https://github.com/southbridgeio'
 
